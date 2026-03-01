@@ -4,4 +4,3 @@ id_ed25519-*
 vpn.db
 /spot-vpn
 __pycache__
-Dockerfile
