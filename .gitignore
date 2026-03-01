@@ -1,0 +1,7 @@
+.env
+id_ed25519-*.pub
+id_ed25519-*
+vpn.db
+/spot-vpn
+__pycache__
+Dockerfile
