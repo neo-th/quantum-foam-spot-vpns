@@ -4,3 +4,5 @@ id_ed25519-*
 vpn.db
 /spot-vpn
 __pycache__
+__init__.py
+__init__.pyc

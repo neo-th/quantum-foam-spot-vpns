@@ -4,9 +4,9 @@ This tool allows you to create, list, and delete spot VPN instances on DigitalOc
 
 ## Usage
 
-    python3 do-spot-vpn.py create
-    python3 do-spot-vpn.py list
-    python3 do-spot-vpn.py delete <suffix>
+    python3 spot-vpn-cli.py create
+    python3 spot-vpn-cli.py list
+    python3 spot-vpn-cli.py delete <suffix> 
 
 ## Environment variables
 
