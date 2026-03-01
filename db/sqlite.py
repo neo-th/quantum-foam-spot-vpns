@@ -3,14 +3,14 @@ from datetime import datetime
 
 conn = sqlite3.connect("vpn.db")
 cursor = conn.cursor()
-cursor.execute("CREATE TABLE IF NOT EXISTS vpn (ip_address TEXT, droplet_id TEXT, random_suffix TEXT, created_at TIMESTAMP)")
+cursor.execute("CREATE TABLE IF NOT EXISTS vpn (ip_address TEXT, id TEXT, random_suffix TEXT, provider TEXT, region TEXT, created_at TIMESTAMP)")
 conn.commit()
 conn.close()
 
-def insert_vpn(ip_address, droplet_id, random_suffix):
+def insert_vpn(ip_address, id, random_suffix, provider, region):
     conn = sqlite3.connect("vpn.db")
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO vpn (ip_address, droplet_id, random_suffix, created_at) VALUES (?, ?, ?, ?)", (ip_address, droplet_id, random_suffix, datetime.now()))
+    cursor.execute("INSERT INTO vpn (ip_address, id, random_suffix, provider, region, created_at) VALUES (?, ?, ?, ?, ?, ?)", (ip_address, id, random_suffix, provider, region, datetime.now()))
     conn.commit()
     conn.close()
 
@@ -22,9 +22,9 @@ def get_vpn():
     conn.close()
     return rows
 
-def delete_vpn(ip_address, droplet_id, random_suffix):
+def delete_vpn(ip_address, id, random_suffix):
     conn = sqlite3.connect("vpn.db")
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM vpn WHERE ip_address = ? AND droplet_id = ? AND random_suffix = ?", (ip_address, droplet_id, random_suffix))
+    cursor.execute("DELETE FROM vpn WHERE ip_address = ? AND id = ? AND random_suffix = ?", (ip_address, id, random_suffix))
     conn.commit()
     conn.close()    

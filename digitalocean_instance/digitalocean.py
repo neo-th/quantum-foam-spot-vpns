@@ -19,14 +19,14 @@ def push_ephemeral_key(client: Client, random_suffix: int):
     resp = client.ssh_keys.create(body=req)
     return resp["ssh_key"]["fingerprint"], resp["ssh_key"]["id"]
 
-def create_droplet(client: Client, random_suffix: int, user_data_script: str):
+def create_droplet(client: Client, random_suffix: int, user_data_script: str, region: str, size: str, image: str):
     fingerprint, ssh_key_id = push_ephemeral_key(client, random_suffix)
 
     req = {
         "name": f"spot-vpn-{random_suffix}",
-        "region": "nyc1",
-        "size": "s-2vcpu-2gb-amd",
-        "image": "ubuntu-22-04-x64",
+        "region": region,
+        "size": size,
+        "image": image,
         "user_data": user_data_script,
         "ssh_keys": [fingerprint]
     }
