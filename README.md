@@ -39,6 +39,19 @@ See [DigitalOcean Personal Access Token](https://docs.digitalocean.com/reference
 #### Pricing
 DigitalOcean droplets give you a specific amount of egress bandwidth for free - based on the droplet size. After that amount of bandwidth is used up, they charge per GB of egress bandwidth. See [DigitalOcean Droplet Pricing](https://www.digitalocean.com/pricing/droplets) under Transfer.
 
+### _Tailscale_
+
+#### Setup
+You will need to set the following environment variables:
+
+    TAILSCALE_AUTH_KEY
+You'll need to create an auth key in the Tailscale admin console. This will allow you to register new nodes without needing to sign in using a web browser. See [Tailscale Auth Key](https://tailscale.com/docs/features/access-control/auth-keys) to learn how to create a key.
+
+The authenicated user must be in the `autoApprovers` list. This will allow the exit node to be automatically approved. If the user is not in the `autoApprovers` list, the exit node will not be approved and you will need to manually approve it in the Tailscale admin console.
+
+#### Pricing
+Tailscale is free for personal use. See [Tailscale Pricing](https://tailscale.com/pricing/) for more information.
+
 ### _GCP_ (Coming soon)
 
 #### Setup
