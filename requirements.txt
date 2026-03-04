@@ -1,3 +1,4 @@
 pydo
 paramiko
 scp
+google-cloud-compute

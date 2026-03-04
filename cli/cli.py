@@ -29,7 +29,7 @@ def cmd_list(args):
     """List active Spot VPNs."""
     vpns = get_vpn()
     if not vpns:
-        print("No active VPNs found.")
+        print("No active spot VPNs found.")
         return
         
     print(f"{'IP Address':<16} | {'Droplet ID':<12} | {'Suffix':<8} | {'Provider':<12} | {'Region':<12} | {'Created At'}")

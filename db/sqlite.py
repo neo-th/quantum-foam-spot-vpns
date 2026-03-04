@@ -27,4 +27,4 @@ def delete_vpn(ip_address, id, random_suffix):
     cursor = conn.cursor()
     cursor.execute("DELETE FROM vpn WHERE ip_address = ? AND id = ? AND random_suffix = ?", (ip_address, id, random_suffix))
     conn.commit()
-    conn.close()    
+    conn.close()
