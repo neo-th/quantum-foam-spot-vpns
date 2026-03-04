@@ -39,6 +39,13 @@ See [DigitalOcean Personal Access Token](https://docs.digitalocean.com/reference
 #### Pricing
 DigitalOcean droplets give you a specific amount of egress bandwidth for free - based on the droplet size. After that amount of bandwidth is used up, they charge per GB of egress bandwidth. See [DigitalOcean Droplet Pricing](https://www.digitalocean.com/pricing/droplets) under Transfer.
 
+### _GCP_ (Coming soon)
+
+#### Setup
+You will need to install the [Google Cloud CLI](https://cloud.google.com/sdk/docs/install) to use GCP as a provider.
+
+## VPN Services
+
 ### _Tailscale_
 
 #### Setup
@@ -51,8 +58,3 @@ The authenicated user must be in the `autoApprovers` list. This will allow the e
 
 #### Pricing
 Tailscale is free for personal use. See [Tailscale Pricing](https://tailscale.com/pricing/) for more information.
-
-### _GCP_ (Coming soon)
-
-#### Setup
-You will need to install the [Google Cloud CLI](https://cloud.google.com/sdk/docs/install) to use GCP as a provider.
