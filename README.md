@@ -2,7 +2,7 @@
 
 # Quantum Foam Spot VPNs
 
-Quantum Foam is a CLI tool that lets you quickly provision on-demand, ephemeral VPN instances across multiple cloud providers. Every component of the instance, including SSH keys, is completely temporary. This is ideal for ad-hoc secure connections—such as accessing region-restricted services—without leaving behind persistent infrastructure.
+Quantum Foam is a CLI tool that lets you quickly provision on-demand, ephemeral VPN instances across multiple cloud providers. Every component of the instance, including SSH keys, is completely temporary. This is ideal for ad-hoc secure connections - such as accessing region restricted services - without leaving behind persistent infrastructure.
 
 ## Virtual Environment Setup
 
