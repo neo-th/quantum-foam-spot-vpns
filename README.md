@@ -16,7 +16,7 @@ Quantum Foam is a CLI tool that lets you quickly provision on-demand, ephemeral 
     python3 qfoam-cli.py list
     python3 qfoam-cli.py delete --provider <provider> --region <region> --suffix <suffix>
 
-> <small>Note: The first run will create a vpn.db file in the same directory as the cli.</small>
+> <small>Note: The first run will create a vpn.db file in the same directory as the cli. This keeps track of the VPNs that are created.</small>
 
 ## Docker
 
